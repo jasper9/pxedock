@@ -42,7 +42,9 @@ generate_conf () {
     fi
     bcast=$subn".255"
     subn=$subn".0"
-    subnetmask="255.255.255.0"
+    subnetmask=$netmask
+
+    echo "My IP is "$IP
 
 cat << EOF > /etc/dhcp/dhcpd.conf
 default-lease-time 600;
